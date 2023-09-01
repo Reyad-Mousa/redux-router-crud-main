@@ -1,8 +1,21 @@
 import usePostDetails from "../hooks/use-post-details";
 import Loading from "../components/Loading";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { clearPosts } from "../state/postSlice";
 
 const Details = () => {
+  const dispatch = useDispatch();
+
   const { loading, error, record } = usePostDetails();
+  // useEffect(() => {
+  //   return () => {
+  //     dispatch({ type: "post/cleanCode" });
+  //   };
+  // }, [dispatch]); or >>>>>
+  useEffect(() => {
+     dispatch(clearPosts());
+  }, [dispatch]);
 
   return (
     <div>

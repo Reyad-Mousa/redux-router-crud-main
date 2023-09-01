@@ -3,9 +3,8 @@ import Loading from "../components/Loading";
 import { Form, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { editPost } from "../state/postSlice";
+import { clearPosts, editPost } from "../state/postSlice";
 import { useNavigate } from "react-router-dom";
-
 
 const Edit = () => {
   function checkIfEmpty() {
@@ -24,11 +23,20 @@ const Edit = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   useEffect(() => {
-    if (record && !title && !description) {
+    if (record) {
       setTitle(record?.title);
       setDescription(record?.description);
     }
-  }, [record, title, description]);
+  }, [record]);
+  // useEffect(() => {
+  //   return () => {
+  //     dispatch({ type: "post/cleanCode" });
+  //   };
+  // }, [dispatch]); or >>>>>
+  useEffect(() => {
+     dispatch(clearPosts());
+  }, [dispatch]);
+
   const formHandler = (e) => {
     e.preventDefault();
     dispatch(editPost({ id: record?.id, title, description }))

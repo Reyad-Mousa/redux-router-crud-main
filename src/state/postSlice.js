@@ -95,7 +95,11 @@ export const editPost = createAsyncThunk(
 export const postSlice = createSlice({
   name: "post",
   initialState,
-  reducers: {},
+  reducers: {
+    clearPosts: (state) => {
+      state.records = [];
+    },
+  },
   extraReducers: {
     // fetch posts
     [fetchPosts.pending]: (state) => {
@@ -170,4 +174,5 @@ export const postSlice = createSlice({
   },
 });
 
+export const { clearPosts } = postSlice.actions;
 export default postSlice.reducer;
