@@ -1,0 +1,38 @@
+.header {
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.header h1 {
+  margin: 20px 0;
+}
+.header .nav {
+  background-color: black;
+  height: 50px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.header .nav li:first-child {
+  margin-left: 5px;
+}
+
+.header .nav li {
+  margin-right: 10px;
+}
+
+.header .nav li a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.login {
+  color: white;
+  font-size: 16px;
+  margin-left: auto;
+}
+.header .nav .active{
+  color: red;
+}
