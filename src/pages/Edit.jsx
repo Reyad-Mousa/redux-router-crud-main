@@ -4,7 +4,7 @@ import { Form, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { editPost } from "../state/postSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; 
 
 const Edit = () => {
   function checkIfEmpty() {
