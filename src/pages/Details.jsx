@@ -2,7 +2,7 @@ import usePostDetails from "../hooks/use-post-details";
 import Loading from "../components/Loading";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { clearPosts } from "../state/postSlice";
+import { clearPosts } from "../store/postSlice";
 
 const Details = () => {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ const Details = () => {
   //   };
   // }, [dispatch]); or >>>>>
   useEffect(() => {
-     dispatch(clearPosts());
+    dispatch(clearPosts());
   }, [dispatch]);
 
   return (

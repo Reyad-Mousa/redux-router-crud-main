@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { createPost } from "../state/postSlice";
+import { createPost } from "../store/postSlice";
 import { Form, Button } from "react-bootstrap";
 import Loading from "../components/Loading";
 const Add = () => {

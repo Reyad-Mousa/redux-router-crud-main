@@ -3,7 +3,7 @@ import Loading from "../components/Loading";
 import { Form, Button } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { clearPosts, editPost } from "../state/postSlice";
+import { clearPosts, editPost } from "../store/postSlice";
 import { useNavigate } from "react-router-dom";
 
 const Edit = () => {
@@ -34,7 +34,7 @@ const Edit = () => {
   //   };
   // }, [dispatch]); or >>>>>
   useEffect(() => {
-     dispatch(clearPosts());
+    dispatch(clearPosts());
   }, [dispatch]);
 
   const formHandler = (e) => {

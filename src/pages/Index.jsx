@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect } from "react";
-import { fetchPosts, deletePost } from "../state/postSlice";
+import { fetchPosts, deletePost } from "../store/postSlice";
 import PostList from "../components/PostList";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "../components/Loading";

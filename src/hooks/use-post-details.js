@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { getPost } from "../state/postSlice";
+import { getPost } from "../store/postSlice";
 import { useParams } from "react-router-dom";
 
 const usePostDetails = () => {

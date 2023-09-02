@@ -10,7 +10,7 @@ import Index from "./pages/Index";
 import Details from "./pages/Details";
 import ErrorPage from "./pages/ErrorPage";
 import { Provider } from "react-redux";
-import store from "./state";
+import store from "./store";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -37,8 +37,7 @@ const router = createBrowserRouter([
 ]);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  
-    <Provider store={store}>
-      <RouterProvider router={router} />
-    </Provider>
+  <Provider store={store}>
+    <RouterProvider router={router} />
+  </Provider>
 );
